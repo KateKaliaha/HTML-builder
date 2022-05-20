@@ -11,7 +11,7 @@ fs.readdir(path.join(__dirname, 'secret-folder'), {withFileTypes: true}, (err, d
         console.log(err);
       }
       if (stats.isFile()) {
-        console.log(file.name.replace(/\..*/, '') + ' - ' + path.extname(file.name).replace('.', '') + ' - ' + (stats.size / 1000) + 'kb');
+        console.log(file.name.replace(/\..*/, '') + ' - ' + path.extname(file.name).replace('.', '') + ' - ' + (stats.size / 1024) + 'kb');
       }  
     }
     );
